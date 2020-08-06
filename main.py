@@ -29,19 +29,20 @@ def insert_sql(students, faculty, staff):
         database="corona_info"
     )
     cnx = mydb.cursor(buffered=True)
-    cnx.execute("CREATE TABLE IF NOT EXISTS corona_info(\
+    cnx.execute("CREATE TABLE IF NOT EXISTS corona_data(\
         id INT AUTO_INCREMENT PRIMARY KEY, \
         Date DATETIME DEFAULT NOW(), \
         Students INT, \
         Faculty INT, \
         Staff INT \
     ); ")
-    cnx.execute("INSERT INTO corona_info(Students, Faculty, Staff) VALUES({}, {}, {});".format(
-        students,
-        faculty,
-        staff
+    cnx.execute("INSERT INTO corona_data (Students, Faculty, Staff) VALUES({}, {}, {});".format(
+        int(students),
+        int(faculty),
+        int(staff)
     ))
     cnx.close()
+    mydb.commit()
     mydb.close()
 
 if __name__ == "__main__":
