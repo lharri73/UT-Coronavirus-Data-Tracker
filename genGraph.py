@@ -4,8 +4,8 @@ import mysql.connector
 def main():
     mydb = mysql.connector.connect(
         host="34.75.230.71",
-        user="root",
-        password="ALANFisher",
+        user="coronaReader",
+        password="superSecretPassword1234",
         database="corona_info"
     )
     cnx = mydb.cursor(buffered=True)
@@ -28,7 +28,7 @@ def main():
     plt.plot(dates, faculty, label="Faculty")
     plt.gcf().autofmt_xdate()
     plt.legend()
-    plt.title('Coronavirus Cases Tt UT')
+    plt.title('Coronavirus Cases At UT')
     plt.ylabel('Cases')
     plt.xlabel('Date')
     plt.show()
