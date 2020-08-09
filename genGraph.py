@@ -1,5 +1,6 @@
 from matplotlib import pyplot as plt
 import mysql.connector
+import datetime
 
 def main():
     mydb = mysql.connector.connect(
@@ -26,6 +27,7 @@ def main():
     plt.plot(dates, students, label="Students")
     plt.plot(dates, staff, label="Staff")
     plt.plot(dates, faculty, label="Faculty")
+    plt.axvline(x=datetime.datetime(2020,8,9), label="Start Of Move-ins", color="r")
     plt.gcf().autofmt_xdate()
     plt.legend()
     plt.title('Coronavirus Cases At UT')
