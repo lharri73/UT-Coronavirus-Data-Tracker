@@ -22,10 +22,10 @@ def insert_sql(students, faculty, staff):
         host="34.75.230.71",
         user="coronaDataEditor",
         password="superSecretPassword1234",
-        client_flags=[ClientFlag.SSL],
-        ssl_ca="server-ca.pem",
-        ssl_cert="client-cert.pem",
-        ssl_key="client-key.pem",
+#        client_flags=[ClientFlag.SSL],
+#        ssl_ca="server-ca.pem",
+#        ssl_cert="client-cert.pem",
+#        ssl_key="client-key.pem",
         database="corona_info"
     )
     cnx = mydb.cursor(buffered=True)
