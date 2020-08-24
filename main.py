@@ -21,7 +21,7 @@ def insert_sql(students, faculty, staff):
     mydb = mysql.connector.connect(
         host="34.75.230.71",
         user="coronaDataEditor",
-        password="superSecretPassword1234",
+        password="*****************",
 #        client_flags=[ClientFlag.SSL],
 #        ssl_ca="server-ca.pem",
 #        ssl_cert="client-cert.pem",

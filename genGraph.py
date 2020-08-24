@@ -7,7 +7,7 @@ def main():
     mydb = mysql.connector.connect(
         host="34.75.230.71",
         user="coronaReader",
-        password="superSecretPassword1234",
+        password="***************",
         database="corona_info"
     )
     cnx = mydb.cursor(buffered=True)
